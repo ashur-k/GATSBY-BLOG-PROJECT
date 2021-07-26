@@ -1,0 +1,45 @@
+Command to create Gatsby project:
+  npm install -g gatsby-cli (Learnt this in troubleshooting if gatsby-cli is not intalled then 
+                              gatsby project won't work.)
+  npx gatsby new gatsby-blog
+
+To run Project:
+  npm run develop
+
+
+Local Host --graphql:
+  {
+    allFiles //and hit Ctrl + Enter to see actual properties
+  }
+
+  like this 
+    {
+	allFile {
+	  edges { // arrays of numbers of files we have in our images folder
+	    node { // inisde every edge is node, node is representation what that file is
+                We can select properties in left pane to select and look at
+	      id
+	    }
+	  }
+	}
+}
+
+Installing => npm install gatsby-transformer-remark
+  The transfomer will allow us take these files from queries
+  using allFiles query, transfomer will get data for us that sits
+  inisde node files
+
+useful informaiton:
+  if we see yarn.lock means our gatsby is installed with yarn packages and we are 
+  required to use 
+    => yarn add gatsby-transformer-remark
+  
+  if we see package-lock.json then it means we are required to use 
+    => npm install gatsby-transformer-remark
+  
+  Adding below line in gatsby-config.js
+    => `gatsby-transformer-remark`
+          ==== Adding it on top of 
+            ###### => `gatsby-transformer-sharp`,
+            ###### => `gatsby-plugin-sharp`,
+    It is plugin that allows us to convert markdown data into html  
