@@ -43,3 +43,19 @@ useful informaiton:
             ###### => `gatsby-transformer-sharp`,
             ###### => `gatsby-plugin-sharp`,
     It is plugin that allows us to convert markdown data into html  
+
+  We need below three packages to run style components in gatsby properly
+    ==> npm install gatsby-plugin-styled-components
+    ==> npm install styled-components
+    ==> npm install babel-plugin-styled-components  
+
+
+    add this line in gatsby-config.js below `gatsby-transformer-sharp`,
+      ==> `gatsby-plugin-styled-components`,
+
+
+    Hosting this Project on Netlify
+      Instantiate a git repository
+      update all code on git repo
+
+    gotp ==> https://www.netlify.com/
