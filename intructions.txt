@@ -58,4 +58,10 @@ useful informaiton:
       Instantiate a git repository
       update all code on git repo
 
-    gotp ==> https://www.netlify.com/
+    goto ==> https://www.netlify.com/
+      Signup = its a simple process ask som basic questions and creates account
+      then click new site from git
+      it will ask authorisations to connect with git and asks to do some installations
+
+      once hosted you can get your url
+
