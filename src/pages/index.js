@@ -12,7 +12,8 @@ const BlogLink = styled(Link)`
 
 const BlogTitle = styled.h3`
   margin-bottom: 20px;
-  color:blue;
+  font-size: 1rem;
+  color:#556b2f;
 `
 
 
@@ -21,16 +22,17 @@ export default ({ data }) => {
   <Layout>
     <Seo title="Home" />
     <div>
-      <h1>Ashur's Thoughts</h1>
-      <h4>{ data.allMarkdownRemark.totalCount } Posts</h4>
+      <h3>There are { data.allMarkdownRemark.totalCount } Posts in this Blog:</h3>
+      <hr />
       {
         data.allMarkdownRemark.edges.map(({node}) => (
           <div key={node.id}>
-          <BlogLink to={node.fields.slug}>
-            <BlogTitle>{ node.frontmatter.title } - { node.frontmatter.date }</BlogTitle>
-          </BlogLink>
-            <p>{node.excerpt}</p>
-          </div>
+            <BlogLink to={node.fields.slug}>
+              <BlogTitle>{ node.frontmatter.title } - { node.frontmatter.date }</BlogTitle>
+            </BlogLink>
+              <p>{node.excerpt}</p>
+              <hr />
+          </div> 
         ))
       }
     </div>
